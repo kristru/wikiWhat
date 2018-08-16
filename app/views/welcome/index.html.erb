@@ -11,95 +11,72 @@
 
   <body>
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <%= link_to 'Home', root_path, class:'nav-link'%>
-            </li>
-            <li class="nav-item">
-              <a class="Wikis" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-          <div class="nav-item">
-               <%= link_to 'Edit profile', root_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", root_path, method: :delete, :class => 'navbar-link'  %>
-               <%= link_to "Sign Up", root_path, :class => 'navbar-link'  %> -
-               <%= link_to "Sign In", root_path, :class => 'navbar-link'  %>
-           </div>
+        
+        <!-- BEGIN JUMBOTRON /////////// -->
+        <div class="jumbotron jumbotron-billboard">
+            <div class="img"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/1182189-200.png', size:'45x45', :alt => "logo" ) %>
+                            
+                            <h1><%= "Welcome to Blocipedia" %></h1>
+                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                            <%= link_to "Sign Up", root_path, :class => 'btn btn-primary'  %>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-
-      <div class="jumbotron jumbotron-billboard">
-        <div class="img"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/1182189-200.png', size:'45x45', :alt => "logo" ) %>
-                    
-                      <h1><%= "Welcome to Blocipedia" %></h1>
-                      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                      <%= link_to "Sign Up", root_path, :class => 'btn btn-primary'  %>
-
-                  </div>
+        <!-- END JUMBOTRON //////////////-->
+        
+        <!-- BEGIN WIKIS ////////////////-->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        Wiki Topic
+                    </div>
+                    <img class="card-img-top" src="https://placeimg.com/400/200/any/grayscale" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wiki title</h5>
+                        <small><p>Wiki Creator</p></small>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Collaborate</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-<!-- BEGIN WIKIS ////////////////-->
-      <div class="row">
-        <div class="col-lg-4">
-            <div class="card">
-              <div class="card-header">
-                Wiki Topic
-              </div>
-              <img class="card-img-top" src="https://placeimg.com/400/200/any/grayscale" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Wiki title</h5>
-                <small><p>Wiki Creator</p></small>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Collaborate</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  Wiki Topic
-                </div>
-                <img class="card-img-top" src="https://placeimg.com/400/200/any/grayscale" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Wiki title</h5>
-                  <small><p>Wiki Creator | created at ...</p></small>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Collaborate</a>
-                </div>
-              </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="card">
-                  <div class="card-header">
+                    <div class="card-header">
                     Wiki Topic
-                  </div>
-                  <img class="card-img-top" src="https://placeimg.com/400/200/any/grayscale" alt="Card image cap">
-                  <div class="card-body">
+                    </div>
+                    <img class="card-img-top" src="https://placeimg.com/400/200/any/grayscale" alt="Card image cap">
+                    <div class="card-body">
                     <h5 class="card-title">Wiki title</h5>
-                    <small><p>Wiki Creator</p></small>
+                    <small><p>Wiki Creator | created at ...</p></small>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-primary">Collaborate</a>
-                  </div>
+                    </div>
                 </div>
-              </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        Wiki Topic
+                    </div>
+                    <img class="card-img-top" src="https://placeimg.com/400/200/any/grayscale" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Wiki title</h5>
+                        <small><p>Wiki Creator</p></small>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Collaborate</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
+        <!-- END WIKIS ////////////////-->
+    </div>
   </body>
   </html>
