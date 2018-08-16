@@ -28,13 +28,20 @@
                 <a class="nav-link" href="#">Link</a>
               </li>
             </ul>
-            <div class="nav-item">
-                <%= link_to 'Edit profile', root_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", root_path, method: :delete, :class => 'navbar-link'  %>
-                <%= link_to "Sign Up", root_path, :class => 'navbar-link'  %> -
-                <%= link_to "Sign In", root_path, :class => 'navbar-link'  %>
-            </div>
+            
+             <% if user_signed_in? %>
+              <div class="nav-item">
+                  Signed in as: <strong><%= current_user.email %></strong> |
+                    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                  <% else %>
+                  <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> -
+                  <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
+                  <% end %>
+              </div>
           </div>
       </nav>  
+
+
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
