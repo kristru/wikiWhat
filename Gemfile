@@ -35,7 +35,9 @@ source 'https://rubygems.org'
 
  gem 'thor', '0.19.1'
 
- gem 'bootstrap-sass'
+ gem 'bootstrap', '~> 4.1.3'
+
+ gem 'sprockets-rails'
 
  group :development do
    gem 'listen', '~> 3.0.5'
