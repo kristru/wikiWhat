@@ -39,6 +39,8 @@ source 'https://rubygems.org'
 
  gem 'sprockets-rails'
 
+  gem 'devise'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
