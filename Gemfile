@@ -6,7 +6,7 @@ source 'https://rubygems.org'
  end
 
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
- gem 'rails', '~> 5.1.2'
+ gem 'rails', '~> 5.0.1'
 
  group :production do
    # Use pg as the production database for Active Record
@@ -39,12 +39,12 @@ source 'https://rubygems.org'
 
  gem 'sprockets-rails'
 
-  gem 'devise'
+ gem 'devise'
 
  group :development do
    gem 'listen', '~> 3.0.5'
  end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails', '~> 3.0'
 end
