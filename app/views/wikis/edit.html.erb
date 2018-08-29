@@ -1,2 +1,17 @@
-<h1>Edit Wiki</h1>
-<%= render 'form' %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WikiWhat</title>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+   <%= render :partial => 'shared/nav' %>
+  <body>
+    <div class="container">
+        <h1>Edit Wiki</h1>
+    </div>
+    <%= render 'form' %>
+</body>
