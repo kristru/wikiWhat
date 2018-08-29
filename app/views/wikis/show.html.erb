@@ -1,9 +1,26 @@
-<div class="container-fluid">
-    <h1>  <%= @wiki.title %> </h1>
-    <p><%= @wiki.body %></p>
-    <hr />
-    <div>
-      <%= link_to "Edit", edit_wiki_path(@wiki), class:'btn btn-primary' %>
-      <%= link_to "Delete", [@wiki], method: :delete, class:'btn btn-danger', data: {confirm: 'Are you sure you want to delete this wiki?'} %>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WikiWhat</title>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <%= render :partial => 'shared/nav' %>
+  <body>
+      <div class="container-fluid">
+          <h1>  <%= @wiki.title %> </h1>
+          <p><%= @wiki.body %></p>
+          <hr />
+          <div>
+          <% if user_signed_in? %>
+            <%= link_to "Edit", edit_wiki_path(@wiki), class:'btn btn-primary' %>
+            <% if current_user == wiki.user %>
+              <%= link_to "Delete", [@wiki], method: :delete, class:'btn btn-danger', data: {confirm: 'Are you sure you want to delete this wiki?'} %>
+            <%end%>
+          <%end%>
+          </div>
+      </div>
+    </body>

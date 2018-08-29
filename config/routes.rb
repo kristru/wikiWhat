@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :wikis
   resources :users
 
+  get "welcome/index"
   root to: 'welcome#index'
 
 end

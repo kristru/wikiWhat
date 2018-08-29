@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bloccit</title>
+    <title>WikiWhat</title>
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
                     <div class="col-lg-12">
                         <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/1182189-200.png', size:'45x45', :alt => "logo" ) %>
                             
-                            <h1><%= "Welcome to Blocipedia" %></h1>
+                            <h1><%= "Welcome to WikiWhat" %></h1>
                             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                             <%= link_to "Sign Up", root_path, :class => 'btn btn-primary'  %>
                     </div>
@@ -41,7 +41,11 @@
                         <h5 class="card-title">Wiki title</h5>
                         <small><p>Wiki Creator</p></small>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Collaborate</a>
+                        <% if user_signed_in? %>
+                        <%= link_to "Collaborate", wiki_path, :class => 'btn btn-primary'  %>
+                        <% else %>
+                        <%= link_to "Collaborate", new_user_registration_path, :class => 'btn btn-primary'  %>
+                    <% end %>
                     </div>
                 </div>
             </div>
@@ -56,7 +60,11 @@
                     <h5 class="card-title">Wiki title</h5>
                     <small><p>Wiki Creator | created at ...</p></small>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Collaborate</a>
+                    <% if user_signed_in? %>
+                        <%= link_to "Collaborate", wiki_path, :class => 'btn btn-primary'  %>
+                        <% else %>
+                        <%= link_to "Collaborate", new_user_registration_path, :class => 'btn btn-primary'  %>
+                    <% end %>
                     </div>
                 </div>
             </div>
@@ -71,7 +79,11 @@
                         <h5 class="card-title">Wiki title</h5>
                         <small><p>Wiki Creator</p></small>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Collaborate</a>
+                        <% if user_signed_in? %>
+                        <%= link_to "Collaborate", wiki_path, :class => 'btn btn-primary'  %>
+                        <% else %>
+                        <%= link_to "Collaborate", new_user_registration_path, :class => 'btn btn-primary'  %>
+                    <% end %>
                     </div>
                 </div>
             </div>
