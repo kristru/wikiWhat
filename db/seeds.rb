@@ -10,8 +10,8 @@ require 'faker'
 #Create Fake Users
 10.times do
     User.create!(
-        email: Faker::Internet.unique.email
-        password: "password"
+        email: Faker::Internet.unique.email,
+        password: Faker::Buffy.big_bad
     )
     end
     user = User.all
@@ -19,9 +19,10 @@ require 'faker'
 #create Wikis
 10.times do
     Wiki.create!(
-        title: Faker::Buffy.episode
+        title: Faker::Buffy.episode,
         body: Faker::Buffy.quote
     )
+    end
 
 puts "Seeds Finished"
 puts "#{User.count} users created"
