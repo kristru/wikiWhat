@@ -26,14 +26,13 @@
             <% @wikis.each do |wiki| %>
               <div class="card" style="width: 100%;">
                 <div class="card-header">
-                  <h4><%= wiki.title %></h4>
+                  <h4><%= link_to wiki.title, wiki_path(wiki) %></h4>
                 </div>
                 <div class="card-body">
                   <p class="card-text"><%= wiki.body %></p>
-                  <%= link_to "View", wiki, class: 'card-link'%>
+                  <%= link_to "View", wiki_path(wiki), class: 'card-link'%>
                 </div>
               </div>
-              <div style="margin: 1em;"></div>
             <% end %>
           </div>
         </div>

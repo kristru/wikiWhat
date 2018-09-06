@@ -6,6 +6,7 @@ class User < ApplicationRecord
   after_initialize :init
 
   before_save {self.email = email.downcase if email.present?}
+  before_save {self.role ||= :standard}
 
   enum role: [:standard, :premium, :admin]
 

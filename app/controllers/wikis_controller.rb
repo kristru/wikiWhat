@@ -1,6 +1,6 @@
 class WikisController < ActionController::Base
   #before_action :require_sign_in, except: :show
-  #before_action :authorize_user, except: [:show, :new, :create]
+  #before_action :authorize_user, except: [:new, :create]
 
   def index
     @wikis = Wiki.all
@@ -49,7 +49,7 @@ class WikisController < ActionController::Base
 
     if @wiki.delete
       flash[:notice] = "Bye Bye Wiki."
-      redirect_to action: :index
+      redirect_to :index
     else
       flash.now[:alert] = "Stubborn little bugger. Please try again."
       render :show
