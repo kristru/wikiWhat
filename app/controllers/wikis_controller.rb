@@ -49,7 +49,7 @@ class WikisController < ActionController::Base
 
     if @wiki.delete
       flash[:notice] = "Bye Bye Wiki."
-      redirect_to :index
+      redirect_to :wikis
     else
       flash.now[:alert] = "Stubborn little bugger. Please try again."
       render :show
