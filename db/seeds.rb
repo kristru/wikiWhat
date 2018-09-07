@@ -11,7 +11,7 @@ require 'faker'
 10.times do
     User.create!(
         email: Faker::Internet.unique.email,
-        password: Faker::Buffy.big_bad
+        password: Faker::Buffy.big_bad + "abcdefg"
     )
     end
     user = User.all
@@ -26,4 +26,4 @@ require 'faker'
 
 puts "Seeds Finished"
 puts "#{User.count} users created"
-puts "#{Wikis.count} wikis created"    
+puts "#{Wiki.count} wikis created"    

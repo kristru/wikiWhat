@@ -3,7 +3,7 @@ class WikisController < ActionController::Base
   #before_action :authorize_user, except: [:new, :create]
 
   def index
-    @wikis = Wiki.all
+    @wiki = Wiki.all
   end
 
   def show
