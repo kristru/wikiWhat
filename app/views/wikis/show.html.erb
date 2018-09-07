@@ -11,8 +11,8 @@
   <%= render :partial => 'shared/nav' %>
   <body>
       <div class="container-fluid">
-          <h1>  <%= @wiki.title %> </h1>
-          <p><%= @wiki.body %></p>
+          <h1><%= @wiki.title %> </h1>
+          <p><%= markdown(@wiki.body).html_safe %></p>
           <hr />
           <div>
           <% if user_signed_in? %>

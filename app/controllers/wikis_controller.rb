@@ -8,6 +8,7 @@ class WikisController < ActionController::Base
 
   def show
     @wiki = Wiki.find(params[:id])
+    @body = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@wiki.body)
   end
 
   def new
