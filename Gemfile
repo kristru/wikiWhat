@@ -49,6 +49,8 @@ source 'https://rubygems.org'
 
  gem 'redcarpet', '~> 3.0.0'
 
+ gem 'stripe'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
