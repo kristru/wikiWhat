@@ -51,6 +51,8 @@ source 'https://rubygems.org'
 
  gem 'stripe'
 
+ gem 'figaro', '1.0'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
