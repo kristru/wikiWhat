@@ -49,7 +49,7 @@ source 'https://rubygems.org'
 
  gem 'redcarpet', '~> 3.0.0'
 
- gem 'stripe'
+ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
  gem 'figaro', '1.0'
 
