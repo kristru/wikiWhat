@@ -12,11 +12,11 @@ class ChargesController < ActionController::Base
         charge = Stripe::Charge.create(
           customer: customer.id, # Note -- this is NOT the user_id in your app
           amount: @amount,
-          description: "Upgrade to Premium - #{current_user.email}",
+          description: "Upgrade to Premium",
           currency: 'usd'
         )
       
-        flash[:notice] = "Thanks for all the money, #{current_user.email}! Feel free to pay me again."
+        flash[:notice] = "Thanks for all the money! Feel free to pay me again."
         redirect_to user_path(current_user) # or wherever
       
         # Stripe will send back CardErrors, with friendly messages
@@ -30,7 +30,7 @@ class ChargesController < ActionController::Base
     def new
         @stripe_btn_data = {
           key: "#{ Rails.configuration.stripe[:publishable_key] }",
-          description: "Upgrade to Premuim - #{current_user.email}",
+          description: "Upgrade to Premuim",
           amount: @amount,
         }
       end
