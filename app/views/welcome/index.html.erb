@@ -23,7 +23,7 @@
                             <h1><%= "Welcome to WikiWhat" %></h1>
                             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                             <% if user_signed_in? %>
-                                <%= link_to "Sign Out", destroy_user_session_path, :class => 'btn btn-primary' %>
+                                <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-primary' %>
                             <% else %>
                                 <%= link_to "Sign Up", root_path, :class => 'btn btn-primary'  %>
                             <% end %>
