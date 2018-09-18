@@ -12,6 +12,15 @@
   <body>
     <div class="container">
         <h1>Create a new Wiki</h1>
+        <%= render partial: 'form', locals: {wiki: @wiki} %>
+        <% if current_user != 'premium' %>
+          <div class="alert alert-info">
+            <h3>Psst... Want to keep this a secret?</h3>
+            <p>Upgrade to Premium and you can create private Wikis.</p>
+            <div class="form-group">
+            <%= link_to "Upgrade", new_charge_path, class: 'btn-sm btn-info' %>
+            </div>
+          </div>
+        <% end %>
     </div>
   </body>
-<%= render partial: 'form', locals: {wiki: @wiki} %>
